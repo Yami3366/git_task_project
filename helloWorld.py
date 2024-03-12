@@ -3,8 +3,8 @@ import random
 
 def guessgame():
     guess = 0
-    max = 100
-    min = 0
+    guess_max = 100
+    guess_min = 0
     answer = random.randrange(0, 100)
     count = 0
 
@@ -13,11 +13,11 @@ def guessgame():
 
         count += 1
         if guess > answer:
-            max = guess
-            print("The answer is between", min, "and", max)
+            guess_max = guess
+            print("The answer is between", guess_min, "and", guess_max)
         elif guess < answer:
-            min = guess
-            print("The answer is between", min, "and", max)
+            guess_min = guess
+            print("The answer is between", guess_min, "and", guess_max)
         else:
             print("You win!")
             print("Total guess: ", count)
